@@ -58,7 +58,63 @@ const products = [
         name: "COMING SOON Watch",
         image: "Assets/Images/PRODUCTS/Rose_Gold_Ruby_Diamond_Front_Rounded.webp",
         price: 18000,
+    },
+    {
+        id: 11,
+        name: "Ocean Rounded",
+        image: "Assets/Images/PRODUCTS/Ocean_Rounded.webp",
+        price: 18000,
+    },
+    {
+        id: 12,
+        name: "Fog Rounded",
+        image: "Assets/Images/PRODUCTS/Fog_Rounded.webp",
+        price: 18000,
+    },
+    {
+        id: 13,
+        name: "Chrono Steel Black Date Rounded",
+        image: "Assets/Images/PRODUCTS/Chrono_Steel_Black_Date_Rounded.webp",
+        price: 18000,
+    },
+    {
+        id: 14,
+        name: "Chrono Steel White Date Rounded",
+        image: "Assets/Images/PRODUCTS/Chrono_Steel_White_Date_Rounded.webp",
+        price: 18000,
+    },
+    {
+        id: 15,
+        name: "1023 Rose",
+        image: "Assets/Images/PRODUCTS/1023roseonbody2.webp",
+        price: 18000,
+    },
+        
+    {
+        id: 16,
+        name: "1023 Black",
+        image: "Assets/Images/PRODUCTS/Black_Link_Black_Flat_Date _Rounded.webp",
+        price: 18000,
+    },
+    {
+        id: 17,
+        name: "1023 STEEL",
+        image: "Assets/Images/PRODUCTs/Steel_Link_Steel_Flat_Date_Rounded.webp",
+        price: 18000,
+    },
+    {
+        id: 18,
+        name: "DATE 002",
+        image: "Assets/Images/PRODUCTS/Steel-Link-Turquiose-Date-Rounded_40mm.webp",
+        price: 18000,
+    },
+    {
+        id: 19,
+        name: "DATE 001",
+        image: "Assets/Images/PRODUCTS/Rose-Link-White-Date-Rounded-40mm.webp",
+        price: 18000,
     }
+    
 ];
 
 // Cart functionality

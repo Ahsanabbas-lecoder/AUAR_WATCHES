@@ -18,7 +18,7 @@
         /* Custom Styles */
         body {
             font-family: 'Arial', sans-serif;
-            background: wheat;
+            background: white;
             color: white;
         }
 
@@ -27,12 +27,13 @@
         }
 
         .contact-form {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(200, 198, 198, 0.1);
             padding: 30px;
             border-radius: 10px;
             backdrop-filter: blur(10px);
+            border: black 3px solid;
         }
-
+        
         .contact-form input,
         .contact-form textarea {
             width: 100%;
@@ -41,11 +42,12 @@
             border: 1px solid #ccc;
             border-radius: 5px;
             background: rgba(255, 255, 255, 0.8);
+            border: black 2px solid;
         }
 
         .contact-form button {
-            background: #ffc107;
-            color: black;
+            background: #1c1d1e;
+            color: white;
             padding: 10px 20px;
             border: none;
             border-radius: 5px;
@@ -53,29 +55,32 @@
         }
 
         .contact-form button:hover {
-            background: #e0a800;
+            background: #1c1d1e83;
         }
 
         .contact-info {
             margin-top: 30px;
+            color: black;
         }
-
+        
         .contact-info h3 {
             margin-bottom: 20px;
+            color: black;
         }
-
+        
         .contact-info p {
+            color: black;
             margin-bottom: 10px;
         }
 
         .social-links a {
-            color: #ffc107;
+            color: #1c1d1e;
             margin: 0 10px;
             font-size: 1.5rem;
         }
 
         .social-links a:hover {
-            color: #e0a800;
+            color: #1c1d1e6b;
         }
 
         .map-container {
@@ -105,7 +110,7 @@
     <!-- Contact Section -->
     <div class="contact-section">
         <div class="container">
-            <h2 class="text-center mb-5">Contact Us</h2>
+            <h2 class="text-center mb-5" style="color: black;">Contact Us</h2>
             <div class="row">
                 <!-- Contact Form -->
                 <div class="col-md-6">
@@ -122,7 +127,7 @@
             <input type="email" name="email" placeholder="Your Email" required>
             <input type="text" name="subject" placeholder="Subject" required>
             <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
+            <button type="submit" >Send Message</button>
         </form>
     </div>
 </div>
@@ -156,9 +161,46 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-4">
-        <p>&copy; 2023 AURA. All rights reserved.</p>
-        <p>Follow us on <a href="#" class="text-white">Instagram</a> | <a href="#" class="text-white">Twitter</a></p>
+    <<footer class="watch-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Product Details</h4>
+                <ul>
+                    <li><a href="#">Option: All</a></li>
+                    <li><a href="#">Size: 36mm</a></li>
+                    <li><a href="#">Design: Skeleton</a></li>
+                    <li><a href="#">Type: Ultra Thin</a></li>
+                    <li><a href="#">Material: Polycarbonate</a></li>
+                    <li><a href="#">Function: Chronograph</a></li>
+                    <li><a href="#">Feature: Date</a></li>
+                    <li><a href="#">Model: 1033</a></li>
+                    <li><a href="#">Edition: Limited Edition</a></li>
+                    <li><a href="#">Sale: Warehouse Sale</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#">Shipping Info</a></li>
+                    <li><a href="#">Returns & Exchanges</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <ul class="social-links">
+                    <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="#"><i class="fab fa-pinterest"></i> Pinterest</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Watch Company. All Rights Reserved. | Limited Edition Warehouse Sale</p>
+        </div>
     </footer>
 
     <!-- Bootstrap JS -->
