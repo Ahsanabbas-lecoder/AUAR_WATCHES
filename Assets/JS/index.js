@@ -15,13 +15,13 @@
     {
         id: 3,
         name: "SKELETON Watch",
-        image: "Assets/Images/assets/images/image3.jpg",
+        image: "Assets/Images/assets/images/image13.jpg",
         price: 7000,
     },
     {
         id: 4,
         name: "SKELETON Watch",
-        image: "Assets/Images/assets/images/image5.jpg",
+        image: "Assets/Images/assets/images/image4.jpg",
         price: 8000,
     },
     {
@@ -112,11 +112,3 @@ function filterProducts(event, tag) {
   });
 }
 
-
-// jQuery to hide/show the "more..." link
-$(document).ready(function () {
-    $("#more-link").click(function (event) {
-        event.preventDefault(); // Prevent the default link behavior
-        $(this).hide(); // Hide the "more..." link
-    });
-});
