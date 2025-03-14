@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AURA - Premium Watches">
+    <meta name="keywords"
+        content="watches, AURA, luxury watches, 36MM, SKELETON, ULTRA THIN, POLYCARBONATE, CHRONOGRAPH, DATE, 1023, LIMITED EDITION, STRAPS, WAREHOUSE SALE">
+    <title>AURA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="Assets/CSS/style.css">
+    <link rel="icon" href="Assets/Images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        .con {
+            background: linear-gradient(45deg, black, grey);
+            min-height: 100vh;
+            color: white;
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .product-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            color: #333;
+        }
+
+        .product-title {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+
+        .price {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .button {
+            background-color: #9e9e9e;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .button:hover {
+            background-color: #000000;
+        }
+
+        .cards {
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .cards img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .carousel-item {
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            <a class="navbar-brand mx-auto" href="index.html">AURA</a>
+            <div class="contact">
+                <a href="contact.html" class="bi bi-telephone text-success text-decoration-none">|Contact-us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <div class="header">
+        <div class="container">
+            <h1>Welcome to AURA</h1>
+            <p>Discover our premium collection of luxury watches.</p>
+        </div>
+    </div>
+
+    <!-- Cards Section -->
+    <div class="con">
+        <div class="about" id="abt">
+            <center>
+                <h2 id="about">ABOUT US</h2>
+            </center>
+            <center>
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit similique deleniti cumque ducimus quasi
+                    necessitatibus incidunt saepe ipsam tenetur libero voluptatem maxime delectus labore rerum
+                    repellendus, optio consectetur itaque doloremque, aspernatur commodi. Eum quisquam et illo hic
+                    reiciendis nulla odit consequuntur autem impedit corrupti. Alias, possimus! Debitis molestias
+                    cupiditate ipsam. <a href="#" id="more-link">more...</a></h2>
+            </center>
+        </div>
+        <div class="container mt-4">
+            <h2 class="text-center">OUR PRODUCTS</h2>
+            <div class="products text-center mb-4">
+                <a href="#" onclick="filterProducts(event, 'ALL')">ALL</a>
+                <a href="#" onclick="filterProducts(event, '36MM')">36MM</a>
+                <a href="#" onclick="filterProducts(event, 'SKELETON')">SKELETON</a>
+                <a href="#" onclick="filterProducts(event, 'ULTRA THIN')">ULTRA THIN</a>
+                <a href="#" onclick="filterProducts(event, 'POLYCARBONATE')">POLYCARBONATE</a>
+                <a href="#" onclick="filterProducts(event, 'CHRONOGRAPH')">CHRONOGRAPH</a>
+                <a href="#" onclick="filterProducts(event, 'DATE')">DATE</a>
+                <a href="#" onclick="filterProducts(event, '1033')">1033</a>
+                <a href="#" onclick="filterProducts(event, 'LIMITED EDITION')">LIMITED EDITION</a>
+                <a href="#" onclick="filterProducts(event, 'WAREHOUSE SALE')">WAREHOUSE SALE</a>
+            </div>
+
+            <!-- Carousel for Categories -->
+            <div id="categoryCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- Category 1: 36MM -->
+                    <div class="carousel-item active">
+                        <h3>36MM Watches</h3>
+                        <div class="d-flex justify-content-center">
+                            <div class="cards" data-tags="ALL, 36MM" onclick="openModal(1)">
+                                <img src="Assets/Images/assets/images/image1.jpg" alt="36MM Watch">
+                                <h3>36MM</h3>
+                                <p>Classic design with modern features.</p>
+                                <a href="#" class="btn">View Details</a>
+                            </div>
+                            <div class="cards" data-tags="ALL, 36MM" onclick="openModal(2)">
+                                <img src="Assets/Images/assets/images/image2.jpg" alt="36MM Watch">
+                                <h3>36MM</h3>
+                                <p>Elegant and timeless.</p>
+                                <a href="#" class="btn">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Category 2: SKELETON -->
+                    <div class="carousel-item">
+                        <h3>SKELETON Watches</h3>
+                        <div class="d-flex justify-content-center">
+                            <div class="cards" data-tags="ALL, SKELETON" onclick="openModal(3)">
+                                <img src="Assets/Images/assets/images/image3.jpg" alt="Skeleton Watch">
+                                <h3>SKELETON</h3>
+                                <p>See-through design for the modern enthusiast.</p>
+                                <a href="#" class="btn">View Details</a>
+                            </div>
+                            <div class="cards" data-tags="ALL, SKELETON" onclick="openModal(4)">
+                                <img src="Assets/Images/assets/images/image4.jpg" alt="Skeleton Watch">
+                                <h3>SKELETON</h3>
+                                <p>Innovative and stylish.</p>
+                                <a href="#" class="btn">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Category 3: ULTRA THIN -->
+                    <div class="carousel-item">
+                        <h3>ULTRA THIN Watches</h3>
+                        <div class="d-flex justify-content-center">
+                            <div class="cards" data-tags="ALL, ULTRA THIN" onclick="openModal(5)">
+                                <img src="Assets/Images/assets/images/image5.jpg" alt="Ultra Thin Watch">
+                                <h3>ULTRA THIN</h3>
+                                <p>Sleek and lightweight for everyday wear.</p>
+                                <a href="#" class="btn">View Details</a>
+                            </div>
+                            <div class="cards" data-tags="ALL, ULTRA THIN" onclick="openModal(6)">
+                                <img src="Assets/Images/assets/images/image6.jpg" alt="Ultra Thin Watch">
+                                <h3>ULTRA THIN</h3>
+                                <p>Minimalist and elegant.</p>
+                                <a href="#" class="btn">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Carousel Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#categoryCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#categoryCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Product Details -->
+    <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <center>
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="productModalLabel">Product Details</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="product-title" id="modal-product-name">Product Name</div>
+                        <div class="img"><img id="modal-product-image" src="" alt="Product Image" class="img-fluid"></div>
+                        <div class="price" id="modal-product-price">Price: Rs. 0</div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Buy Now</button>
+                        <button type="button" class="btn btn-success">Add to Cart</button>
+                    </div>
+                </center>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="bg-dark text-white text-center py-4">
+        <p>&copy; 2023 AURA. All rights reserved.</p>
+        <p>Follow us on <a href="#" class="text-white">Instagram</a> | <a href="#" class="text-white">Twitter</a></p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- jQuery Library -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <!-- Custom Script -->
+    <script>
+        // Product Data
+        const products = [
+            {
+                id: 1,
+                name: "36MM Watch",
+                image: "Assets/Images/assets/images/image1.jpg",
+                price: 5000,
+            },
+            {
+                id: 2,
+                name: "36MM Watch",
+                image: "Assets/Images/assets/images/image2.jpg",
+                price: 6000,
+            },
+            {
+                id: 3,
+                name: "SKELETON Watch",
+                image: "Assets/Images/assets/images/image3.jpg",
+                price: 7000,
+            },
+            {
+                id: 4,
+                name: "SKELETON Watch",
+                image: "Assets/Images/assets/images/image4.jpg",
+                price: 8000,
+            },
+            {
+                id: 5,
+                name: "ULTRA THIN Watch",
+                image: "Assets/Images/assets/images/image5.jpg",
+                price: 9000,
+            },
+            {
+                id: 6,
+                name: "ULTRA THIN Watch",
+                image: "Assets/Images/assets/images/image6.jpg",
+                price: 10000,
+            },
+        ];
+
+        // Function to open modal with product details
+        function openModal(productId) {
+            const product = products.find(p => p.id == productId);
+            if (product) {
+                document.getElementById('modal-product-name').textContent = product.name;
+                document.getElementById('modal-product-image').src = product.image;
+                document.getElementById('modal-product-price').textContent = `Price: Rs. ${product.price}`;
+
+                // Show the modal
+                const modal = new bootstrap.Modal(document.getElementById('productModal'));
+                modal.show();
+            }
+        }
+        function filterProducts(event, tag) {
+          event.preventDefault();
+          document.querySelectorAll('.cards').forEach(card => {
+              let tags = card.getAttribute('data-tags');
+              if (tag === 'ALL' || (tags && tags.includes(tag))) {
+                  card.style.display = 'block';
+              } else {
+                  card.style.display = 'none';
+              }
+          });
+      }
+      
+
+        // jQuery to hide/show the "more..." link
+        $(document).ready(function () {
+            $("#more-link").click(function (event) {
+                event.preventDefault(); // Prevent the default link behavior
+                $(this).hide(); // Hide the "more..." link
+            });
+        });
+    </script>
+</body>
+
+</html>
