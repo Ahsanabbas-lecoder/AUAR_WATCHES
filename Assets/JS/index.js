@@ -1,5 +1,5 @@
-// Product Data
-const products = [
+ // Product Data
+ const products = [
     {
         id: 1,
         name: "36MM Watch",
@@ -8,22 +8,83 @@ const products = [
     },
     {
         id: 2,
-        name: "SKELETON Watch",
+        name: "36MM Watch",
         image: "Assets/Images/assets/images/image2.jpg",
         price: 6000,
     },
     {
         id: 3,
-        name: "ULTRA THIN Watch",
-        image: "Assets/Images/assets/images/imag3.jpg",
+        name: "SKELETON Watch",
+        image: "Assets/Images/assets/images/image3.jpg",
         price: 7000,
     },
     {
         id: 4,
-        name: "CHRONOGRAPH Watch",
-        image: "Assets/Images/assets/images/image4.jpg",
+        name: "SKELETON Watch",
+        image: "Assets/Images/assets/images/image5.jpg",
         price: 8000,
     },
+    {
+        id: 5,
+        name: "ULTRA THIN Watch",
+        image: "Assets/Images/assets/images/image5.jpg",
+        price: 9000,
+    },
+    {
+        id: 6,
+        name: "ULTRA THIN Watch",
+        image: "Assets/Images/assets/images/image6.jpg",
+        price: 10000,
+    },
+    {
+        id: 7,
+        name: "ULTRA THIN Watch",
+        image: "Assets/Images/assets/images/image6.jpg",
+        price: 10000,
+    },
+    {
+        id: 8,
+        name: "ULTRA THIN Watch",
+        image: "Assets/Images/assets/images/image6.jpg",
+        price: 10000,
+    },
+    {
+        id: 9,
+        name: "ULTRA THIN Watch",
+        image: "Assets/Images/assets/images/image6.jpg",
+        price: 10000,
+    },
+    {
+        id: 10,
+        name: "ULTRA THIN Watch",
+        image: "Assets/Images/assets/images/image6.jpg",
+        price: 10000,
+    },
+    {
+        id: 11,
+        name: "ULTRA THIN Watch",
+        image: "Assets/Images/assets/images/image6.jpg",
+        price: 10000,
+    },
+    {
+        id: 12,
+        name: "ULTRA THIN Watch",
+        image: "Assets/Images/assets/images/image6.jpg",
+        price: 10000,
+    },
+    {
+        id: 14,
+        name: "ULTRA THIN Watch",
+        image: "Assets/Images/assets/images/image6.jpg",
+        price: 10000,
+    },
+    {
+        id: 16,
+        name: "ULTRA THIN Watch",
+        image: "Assets/Images/assets/images/image6.jpg",
+        price: 10000,
+    },
+
 ];
 
 // Function to open modal with product details
@@ -39,3 +100,23 @@ function openModal(productId) {
         modal.show();
     }
 }
+function filterProducts(event, tag) {
+  event.preventDefault();
+  document.querySelectorAll('.cards').forEach(card => {
+      let tags = card.getAttribute('data-tags');
+      if (tag === 'ALL' || (tags && tags.includes(tag))) {
+          card.style.display = 'block';
+      } else {
+          card.style.display = 'none';
+      }
+  });
+}
+
+
+// jQuery to hide/show the "more..." link
+$(document).ready(function () {
+    $("#more-link").click(function (event) {
+        event.preventDefault(); // Prevent the default link behavior
+        $(this).hide(); // Hide the "more..." link
+    });
+});
