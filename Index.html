@@ -72,10 +72,6 @@
             height: auto;
             border-radius: 8px;
         }
-
-        .carousel-item {
-            padding: 20px;
-        }
     </style>
 </head>
 
@@ -123,79 +119,109 @@
                 <a href="#" onclick="filterProducts(event, 'CHRONOGRAPH')">CHRONOGRAPH</a>
                 <a href="#" onclick="filterProducts(event, 'DATE')">DATE</a>
                 <a href="#" onclick="filterProducts(event, '1033')">1033</a>
-                <a href="#" onclick="filterProducts(event, 'LIMITED EDITION')">LIMITED EDITION</a>
-                <a href="#" onclick="filterProducts(event, 'WAREHOUSE SALE')">WAREHOUSE SALE</a>
+                <a href="#" onclick="filterProducts(event, 'STRAPS')">STRAPS</a>
+                <a href="#" onclick="filterProducts(event, 'SALE ACHIVE')">SALE ACHIVE</a>
+                <a href="#" onclick="filterProducts(event, 'COMING SOON')">COMING SOON</a>
             </div>
 
-            <!-- Carousel for Categories -->
-            <div id="categoryCarousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <!-- Category 1: 36MM -->
-                    <div class="carousel-item active">
-                        <h3>36MM Watches</h3>
-                        <div class="d-flex justify-content-center">
-                            <div class="cards" data-tags="ALL, 36MM" onclick="openModal(1)">
-                                <img src="Assets/Images/assets/images/image1.jpg" alt="36MM Watch">
-                                <h3>36MM</h3>
-                                <p>Classic design with modern features.</p>
-                                <a href="#" class="btn">View Details</a>
-                            </div>
-                            <div class="cards" data-tags="ALL, 36MM" onclick="openModal(2)">
-                                <img src="Assets/Images/assets/images/image2.jpg" alt="36MM Watch">
-                                <h3>36MM</h3>
-                                <p>Elegant and timeless.</p>
-                                <a href="#" class="btn">View Details</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Category 2: SKELETON -->
-                    <div class="carousel-item">
-                        <h3>SKELETON Watches</h3>
-                        <div class="d-flex justify-content-center">
-                            <div class="cards" data-tags="ALL, SKELETON" onclick="openModal(3)">
-                                <img src="Assets/Images/assets/images/image3.jpg" alt="Skeleton Watch">
-                                <h3>SKELETON</h3>
-                                <p>See-through design for the modern enthusiast.</p>
-                                <a href="#" class="btn">View Details</a>
-                            </div>
-                            <div class="cards" data-tags="ALL, SKELETON" onclick="openModal(4)">
-                                <img src="Assets/Images/assets/images/image4.jpg" alt="Skeleton Watch">
-                                <h3>SKELETON</h3>
-                                <p>Innovative and stylish.</p>
-                                <a href="#" class="btn">View Details</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Category 3: ULTRA THIN -->
-                    <div class="carousel-item">
-                        <h3>ULTRA THIN Watches</h3>
-                        <div class="d-flex justify-content-center">
-                            <div class="cards" data-tags="ALL, ULTRA THIN" onclick="openModal(5)">
-                                <img src="Assets/Images/assets/images/image5.jpg" alt="Ultra Thin Watch">
-                                <h3>ULTRA THIN</h3>
-                                <p>Sleek and lightweight for everyday wear.</p>
-                                <a href="#" class="btn">View Details</a>
-                            </div>
-                            <div class="cards" data-tags="ALL, ULTRA THIN" onclick="openModal(6)">
-                                <img src="Assets/Images/assets/images/image6.jpg" alt="Ultra Thin Watch">
-                                <h3>ULTRA THIN</h3>
-                                <p>Minimalist and elegant.</p>
-                                <a href="#" class="btn">View Details</a>
-                            </div>
-                        </div>
-                    </div>
+            <!-- Product Cards -->
+            <div class="d-flex justify-content-center flex-wrap">
+                <div class="cards" data-tags="ALL, 36MM" onclick="openModal(1)">
+                    <img src="Assets/Images/assets/images/image1.jpg" alt="36MM Watch">
+                    <h3>36MM</h3>
+                    <p>Classic design with modern features.</p>
+                    <a href="#" class="btn">View Details</a>
                 </div>
-                <!-- Carousel Controls -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#categoryCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#categoryCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+                <div class="cards" data-tags="ALL, 36MM" onclick="openModal(2)">
+                    <img src="Assets/Images/assets/images/image2.jpg" alt="36MM Watch">
+                    <h3>36MM</h3>
+                    <p>Elegant and timeless.</p>
+                    <a href="#" class="btn">View Details</a>
+                </div>
+                <div class="cards" data-tags="ALL, SKELETON" onclick="openModal(3)">
+                    <img src="Assets/Images/assets/images/image5.jpg" alt="Skeleton Watch">
+                    <h3>SKELETON</h3>
+                    <p>See-through design for the modern enthusiast.</p>
+                    <a href="#" class="btn">View Details</a>
+                </div>
+                <div class="cards" data-tags="ALL, SKELETON" onclick="openModal(4)">
+                    <img src="Assets/Images/assets/images/image4.jpg" alt="Skeleton Watch">
+                    <h3>SKELETON</h3>
+                    <p>Innovative and stylish.</p>
+                    <a href="#" class="btn">View Details</a>
+                </div>
+                <div class="cards" data-tags="ALL, ULTRA THIN" onclick="openModal(5)">
+                    <img src="Assets/Images/assets/images/image5.jpg" alt="Ultra Thin Watch">
+                    <h3>ULTRA THIN</h3>
+                    <p>Sleek and lightweight for everyday wear.</p>
+                    <a href="#" class="btn">View Details</a>
+                </div>
+                <div class="cards" data-tags="ALL, ULTRA THIN" onclick="openModal(6)">
+                    <img src="Assets/Images/assets/images/image6.jpg" alt="Ultra Thin Watch">
+                    <h3>ULTRA THIN</h3>
+                    <p>Minimalist and elegant.</p>
+                    <a href="#" class="btn">View Details</a>
+                </div>
+                <div class="cards" data-tags="ALL, ULTRA THIN" onclick="openModal(7)">
+                    <img src="Assets/Images/assets/images/image6.jpg" alt="Ultra Thin Watch">
+                    <h3>ULTRA THIN</h3>
+                    <p>Minimalist and elegant.</p>
+                    <a href="#" class="btn">View Details</a>
+                </div>
+                <div class="cards" data-tags="ALL, ULTRA THIN" onclick="openModal(8)">
+                    <img src="Assets/Images/assets/images/image6.jpg" alt="Ultra Thin Watch">
+                    <h3>ULTRA THIN</h3>
+                    <p>Minimalist and elegant.</p>
+                    <a href="#" class="btn">View Details</a>
+                </div>
+                <div class="cards" data-tags="ALL, ULTRA THIN" onclick="openModal(9)">
+                    <img src="Assets/Images/assets/images/image6.jpg" alt="Ultra Thin Watch">
+                    <h3>ULTRA THIN</h3>
+                    <p>Minimalist and elegant.</p>
+                    <a href="#" class="btn">View Details</a>
+                </div>
+                <div class="cards" data-tags="ALL, ULTRA THIN" onclick="openModal(10)">
+                    <img src="Assets/Images/assets/images/image6.jpg" alt="Ultra Thin Watch">
+                    <h3>ULTRA THIN</h3>
+                    <p>Minimalist and elegant.</p>
+                    <a href="#" class="btn">View Details</a>
+                </div>
+                <div class="cards" data-tags="ALL, ULTRA THIN" onclick="openModal(11)">
+                    <img src="Assets/Images/assets/images/image6.jpg" alt="Ultra Thin Watch">
+                    <h3>ULTRA THIN</h3>
+                    <p>Minimalist and elegant.</p>
+                    <a href="#" class="btn">View Details</a>
+                </div>
+                <div class="cards" data-tags="ALL, ULTRA THIN" onclick="openModal(12)">
+                    <img src="Assets/Images/assets/images/image6.jpg" alt="Ultra Thin Watch">
+                    <h3>ULTRA THIN</h3>
+                    <p>Minimalist and elegant.</p>
+                    <a href="#" class="btn">View Details</a>
+                </div>
+                <div class="cards" data-tags="ALL, ULTRA THIN" onclick="openModal(13)">
+                    <img src="Assets/Images/assets/images/image6.jpg" alt="Ultra Thin Watch">
+                    <h3>ULTRA THIN</h3>
+                    <p>Minimalist and elegant.</p>
+                    <a href="#" class="btn">View Details</a>
+                </div>
+                <div class="cards" data-tags="ALL, ULTRA THIN" onclick="openModal(14)">
+                    <img src="Assets/Images/assets/images/image6.jpg" alt="Ultra Thin Watch">
+                    <h3>ULTRA THIN</h3>
+                    <p>Minimalist and elegant.</p>
+                    <a href="#" class="btn">View Details</a>
+                </div>
+                <div class="cards" data-tags="ALL, ULTRA THIN" onclick="openModal(15)">
+                    <img src="Assets/Images/assets/images/image6.jpg" alt="Ultra Thin Watch">
+                    <h3>ULTRA THIN</h3>
+                    <p>Minimalist and elegant.</p>
+                    <a href="#" class="btn">View Details</a>
+                </div>
+                <div class="cards" data-tags="ALL, ULTRA THIN" onclick="openModal(16)">
+                    <img src="Assets/Images/assets/images/image6.jpg" alt="Ultra Thin Watch">
+                    <h3>ULTRA THIN</h3>
+                    <p>Minimalist and elegant.</p>
+                    <a href="#" class="btn">View Details</a>
+                </div>
             </div>
         </div>
     </div>
@@ -225,10 +251,47 @@
     </div>
 
     <!-- Footer Section -->
-    <footer class="bg-dark text-white text-center py-4">
-        <p>&copy; 2023 AURA. All rights reserved.</p>
-        <p>Follow us on <a href="#" class="text-white">Instagram</a> | <a href="#" class="text-white">Twitter</a></p>
-    </footer>
+    <footer class="watch-footer">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>Product Details</h4>
+            <ul>
+              <li><a href="#">Option: All</a></li>
+              <li><a href="#">Size: 36mm</a></li>
+              <li><a href="#">Design: Skeleton</a></li>
+              <li><a href="#">Type: Ultra Thin</a></li>
+              <li><a href="#">Material: Polycarbonate</a></li>
+              <li><a href="#">Function: Chronograph</a></li>
+              <li><a href="#">Feature: Date</a></li>
+              <li><a href="#">Model: 1033</a></li>
+              <li><a href="#">Edition: Limited Edition</a></li>
+              <li><a href="#">Sale: Warehouse Sale</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Shipping Info</a></li>
+              <li><a href="#">Returns & Exchanges</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Follow Us</h4>
+            <ul class="social-links">
+              <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+              <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+              <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+              <li><a href="#"><i class="fab fa-pinterest"></i> Pinterest</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2023 Watch Company. All Rights Reserved. | Limited Edition Warehouse Sale</p>
+        </div>
+      </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
@@ -239,81 +302,8 @@
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 
     <!-- Custom Script -->
-    <script>
-        // Product Data
-        const products = [
-            {
-                id: 1,
-                name: "36MM Watch",
-                image: "Assets/Images/assets/images/image1.jpg",
-                price: 5000,
-            },
-            {
-                id: 2,
-                name: "36MM Watch",
-                image: "Assets/Images/assets/images/image2.jpg",
-                price: 6000,
-            },
-            {
-                id: 3,
-                name: "SKELETON Watch",
-                image: "Assets/Images/assets/images/image3.jpg",
-                price: 7000,
-            },
-            {
-                id: 4,
-                name: "SKELETON Watch",
-                image: "Assets/Images/assets/images/image4.jpg",
-                price: 8000,
-            },
-            {
-                id: 5,
-                name: "ULTRA THIN Watch",
-                image: "Assets/Images/assets/images/image5.jpg",
-                price: 9000,
-            },
-            {
-                id: 6,
-                name: "ULTRA THIN Watch",
-                image: "Assets/Images/assets/images/image6.jpg",
-                price: 10000,
-            },
-        ];
-
-        // Function to open modal with product details
-        function openModal(productId) {
-            const product = products.find(p => p.id == productId);
-            if (product) {
-                document.getElementById('modal-product-name').textContent = product.name;
-                document.getElementById('modal-product-image').src = product.image;
-                document.getElementById('modal-product-price').textContent = `Price: Rs. ${product.price}`;
-
-                // Show the modal
-                const modal = new bootstrap.Modal(document.getElementById('productModal'));
-                modal.show();
-            }
-        }
-        function filterProducts(event, tag) {
-          event.preventDefault();
-          document.querySelectorAll('.cards').forEach(card => {
-              let tags = card.getAttribute('data-tags');
-              if (tag === 'ALL' || (tags && tags.includes(tag))) {
-                  card.style.display = 'block';
-              } else {
-                  card.style.display = 'none';
-              }
-          });
-      }
-      
-
-        // jQuery to hide/show the "more..." link
-        $(document).ready(function () {
-            $("#more-link").click(function (event) {
-                event.preventDefault(); // Prevent the default link behavior
-                $(this).hide(); // Hide the "more..." link
-            });
-        });
-    </script>
+    <script src="Assets/JS/index.js"></script>
 </body>
+
 
 </html>
