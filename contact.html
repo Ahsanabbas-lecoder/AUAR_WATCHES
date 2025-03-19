@@ -109,16 +109,23 @@
             <div class="row">
                 <!-- Contact Form -->
                 <div class="col-md-6">
-                    <div class="contact-form">
-                        <form>
-                            <input type="text" placeholder="Your Name" required>
-                            <input type="email" placeholder="Your Email" required>
-                            <input type="text" placeholder="Subject" required>
-                            <textarea rows="5" placeholder="Your Message" required></textarea>
-                            <button type="submit">Send Message</button>
-                        </form>
-                    </div>
-                </div>
+    <div class="contact-form">
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <!-- Web3Forms Required Fields -->
+            <input type="hidden" name="access_key" value="9cd1384f-dd31-4b06-bc01-cfadd9c54d33">
+            <input type="hidden" name="subject" value="New Contact Form Submission from AURA">
+            <input type="hidden" name="from_name" value="AURA Contact Form">
+            <input type="checkbox" name="botcheck" style="display: none;">
+
+            <!-- Form Fields -->
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="text" name="subject" placeholder="Subject" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</div>
 
                 <!-- Contact Information -->
                 <div class="col-md-6">
