@@ -388,4 +388,39 @@
     border-top: 1px solid #555;
     font-size: 14px;
 }
+.about-content {
+    display: flex;
+    align-items: center; /* Vertically center the content */
+    gap: 20px; /* Space between text and image */
+    margin-top: 20px;
+}
 
+.about-text {
+    flex: 1; /* Takes up remaining space */
+    font-size: large;
+}
+
+.about-image {
+    flex: 1; /* Takes up remaining space */
+    text-align: right; /* Aligns the image to the right */
+}
+
+.about-image img {
+    width: 400px; /* Fixed width */
+    height: 300px; /* Fixed height */
+    border-radius: 8px; /* Rounded corners */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column; /* Stack text and image vertically */
+        text-align: center; /* Center-align text */
+
+    }
+
+    .about-image {
+        text-align: center; /* Center-align image */
+    }
+}
