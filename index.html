@@ -30,12 +30,34 @@
     </nav>
 
     <!-- Header Section -->
-    <div class="header">
-        <div class="container">
-            <h1>Welcome to AURA</h1>
-            <p>Discover our premium collection of luxury watches.</p>
+    <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false">
+        <div class="carousel-inner">
+          
+          <div class="carousel-item active header">
+            <img src="Assets/Images/header/36mm.webp" class="d-block" alt="...">
+          </div>
+          <div class="carousel-item header">
+            <img src="Assets/Images/header/CHONOGRAPH.webp" class="d-block " alt="...">
+          </div>
+          <div class="carousel-item header">
+            <img src="Assets/Images/header/DATE.webp" class="d-block" alt="...">
+          </div>
+          <div class="carousel-item header">
+            <img src="Assets/Images/header/SKELETON.webp" class="d-block " alt="...">
+          </div>
+          <div class="carousel-item header">
+            <img src="Assets/Images/header/ULTRA_THIN.webp" class="d-block " alt="...">
+          </div>
         </div>
-    </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
 
     <!-- Cards Section -->
     <div class="con">
@@ -57,28 +79,28 @@ Once in a decade a brand emerges, transcending the limits of what was believed p
                 </div>
             </div>
         </div>
-        <div class="container mt-4">
+        <div class="container-filter mt-4">
             <h2 class="text-center">OUR PRODUCTS</h2>
-                        <div class="d-flex justify-content-center">
-                            <a href="#" class="btn btn-outline-light mx-2" onclick="filterProducts(event, 'ALL')">ALL</a>
-                            <a href="#" class="btn btn-outline-light mx-2" onclick="filterProducts(event, '36MM')">36MM</a>
-                            <a href="#" class="btn btn-outline-light mx-2" onclick="filterProducts(event, 'SKELETON')">SKELETON</a>
+                        <div class="d-flex justify-content-center ">
+                            <a href="#" class="btn btn-outline-light mx-2 border-dark bg-dark" onclick="filterProducts(event, 'ALL')">ALL</a>
+                            <a href="#" class="btn btn-outline-light mx-2 border-dark bg-dark" onclick="filterProducts(event, '36MM')">36MM</a>
+                            <a href="#" class="btn btn-outline-light mx-2 border-dark bg-dark" onclick="filterProducts(event, 'SKELETON')">SKELETON</a>
                         
                 
                         <!-- <div class="d-flex justify-content-center"> -->
-                            <a href="#" class="btn btn-outline-light mx-2" onclick="filterProducts(event, 'ULTRA THIN')">ULTRA THIN</a>
-                            <a href="#" class="btn btn-outline-light mx-2" onclick="filterProducts(event, 'POLYCARBONATE')">POLYCARBONATE</a>
-                            <a href="#" class="btn btn-outline-light mx-2" onclick="filterProducts(event, 'CHRONOGRAPH')">CHRONOGRAPH</a>
+                            <a href="#" class="btn btn-outline-light mx-2 border-dark bg-dark" onclick="filterProducts(event, 'ULTRA THIN')">ULTRA THIN</a>
+                            <a href="#" class="btn btn-outline-light mx-2 border-dark bg-dark" onclick="filterProducts(event, 'POLYCARBONATE')">POLYCARBONATE</a>
+                            <a href="#" class="btn btn-outline-light mx-2 border-dark bg-dark" onclick="filterProducts(event, 'CHRONOGRAPH')">CHRONOGRAPH</a>
                         
                 
                         <!-- <div class="d-flex justify-content-center"> -->
-                            <a href="#" class="btn btn-outline-light mx-2" onclick="filterProducts(event, 'DATE')">DATE</a>
-                            <a href="#" class="btn btn-outline-light mx-2" onclick="filterProducts(event, '1033')">1033</a>
-                            <a href="#" class="btn btn-outline-light mx-2" onclick="filterProducts(event, 'STRAPS')">STRAPS</a>
-                        </div>
+                            <a href="#" class="btn btn-outline-light mx-2 border-dark bg-dark" onclick="filterProducts(event, 'DATE')">DATE</a>
+                            <a href="#" class="btn btn-outline-light mx-2 border-dark bg-dark" onclick="filterProducts(event, '1033')">1033</a>
+                            <a href="#" class="btn btn-outline-light mx-2 border-dark bg-dark" onclick="filterProducts(event, 'STRAPS')">STRAPS</a>
+                        
                         <!-- <div class="d-flex justify-content-center"> -->
-                            <a href="#" class="btn btn-outline-light mx-2" onclick="filterProducts(event, 'SALE ACHIVE')">SALE ACHIVE</a>
-                            <a href="#" class="btn btn-outline-light mx-2" onclick="filterProducts(event, 'COMING SOON')">COMING SOON</a>
+                            <a href="#" class="btn btn-outline-light mx-2 border-dark bg-dark" onclick="filterProducts(event, 'SALE ACHIVE')">SALE ACHIVE</a>
+                            <a href="#" class="btn btn-outline-light mx-2 border-dark bg-dark" onclick="filterProducts(event, 'COMING SOON')">COMING SOON</a>
                         </div>
                
              
@@ -88,81 +110,81 @@ Once in a decade a brand emerges, transcending the limits of what was believed p
 <div class="d-flex justify-content-center flex-wrap">
     <!-- Card 1 -->
     <div class="cards" data-tags="ALL, 36MM" onclick="openModal(1)">
-        <img src="Assets/Images/assets/images/image1.jpg" alt="36MM Watch">
+        <img src="Assets/Images/PRODUCTS/BlackLinkSkeleton2Rounded40mm.webp" alt="36MM Watch">
         <h3>36MM</h3>
-        <p>Classic design with modern features.</p>
+        <!-- <p>Classic design with modern features.</p> -->
         <a href="#" class="btn">View Details</a>
     </div>
 
     <!-- Card 2 -->
     <div class="cards" data-tags="ALL, 36MM" onclick="openModal(2)">
-        <img src="Assets/Images/assets/images/image2.jpg" alt="36MM Watch">
+        <img src="Assets/Images/PRODUCTS/New_Diamond_Rounded_5ae39b3d-49ac-4c12-8bc7-b48d1544a448.webp" alt="36MM Watch">
         <h3>36MM</h3>
-        <p>Elegant and timeless.</p>
+        <!-- <p>Elegant and timeless.</p> -->
         <a href="#" class="btn">View Details</a>
     </div>
 
     <!-- Card 3 -->
     <div class="cards" data-tags="ALL, SKELETON" onclick="openModal(3)">
-        <img src="Assets/Images/assets/images/image13.jpg" alt="Skeleton Watch">
+        <img src="Assets/Images/PRODUCTS/RoseBlackRubberSkeleton1Rounded40mm.webp" alt="Skeleton Watch">
         <h3>SKELETON</h3>
-        <p>See-through design for the modern enthusiast.</p>
+        <!-- <p>See-through design for the modern enthusiast.</p> -->
         <a href="#" class="btn">View Details</a>
     </div>
 
     <!-- Card 4 -->
     <div class="cards" data-tags="ALL, SKELETON" onclick="openModal(4)">
-        <img src="Assets/Images/assets/images/image4.jpg" alt="Skeleton Watch">
+        <img src="Assets/Images/PRODUCTS/RoseLinkSkeleton1Rounded40mm_0c8e5e5d-ead3-493f-8512-6512717fb635.webp" alt="Skeleton Watch">
         <h3>SKELETON</h3>
-        <p>Innovative and stylish.</p>
+        <!-- <p>Innovative and stylish.</p> -->
         <a href="#" class="btn">View Details</a>
     </div>
 
     <!-- Card 5 -->
     <div class="cards" data-tags="ALL, ULTRA THIN" onclick="openModal(5)">
-        <img src="Assets/Images/assets/images/image5.jpg" alt="Ultra Thin Watch">
+        <img src="Assets/Images/PRODUCTS/Steel_Frosted.webp" alt="Ultra Thin Watch">
         <h3>ULTRA THIN</h3>
-        <p>Sleek and lightweight for everyday wear.</p>
+        <!-- <p>Sleek and lightweight for everyday wear.</p> -->
         <a href="#" class="btn">View Details</a>
     </div>
 
     <!-- Card 6 -->
     <div class="cards" data-tags="ALL, ULTRA THIN" onclick="openModal(6)">
-        <img src="Assets/Images/assets/images/image6.jpg" alt="Ultra Thin Watch">
+        <img src="Assets/Images/PRODUCTS/Steel_Link_Skeleton2_Rounded_40mm.webp" alt="Ultra Thin Watch">
         <h3>ULTRA THIN</h3>
-        <p>Minimalist and elegant.</p>
+        <!-- <p>Minimalist and elegant.</p> -->
         <a href="#" class="btn">View Details</a>
     </div>
 
     <!-- Card 7 -->
     <div class="cards" data-tags="ALL, ULTRA THIN" onclick="openModal(7)">
-        <img src="Assets/Images/assets/images/image6.jpg" alt="Ultra Thin Watch">
+        <img src="Assets/Images/PRODUCTS/SteelBlackRubberSkeleton1Rounded40mm.webp" alt="Ultra Thin Watch">
         <h3>ULTRA THIN</h3>
-        <p>Minimalist and elegant.</p>
+        <!-- <p>Minimalist and elegant.</p> -->
         <a href="#" class="btn">View Details</a>
     </div>
 
     <!-- Card 8 -->
     <div class="cards" data-tags="ALL, COMING SOON" onclick="openModal(8)">
-        <img src="Assets/Images/assets/images/image6.jpg" alt="Coming Soon Watch">
+        <img src="Assets/Images/PRODUCTS/Box_2_Shot.webp" alt="Coming Soon Watch">
         <h3>COMING SOON</h3>
-        <p>Stay tuned for our new collection!</p>
+        <!-- <p>Stay tuned for our new collection!</p> -->
         <a href="#" class="btn">View Details</a>
     </div>
 
     <!-- Card 9 -->
     <div class="cards" data-tags="ALL, COMING SOON" onclick="openModal(9)">
-        <img src="Assets/Images/assets/images/image6.jpg" alt="Coming Soon Watch">
+        <img src="Assets/Images/PRODUCTS/Rose_Gold_Frosted.webp" alt="Coming Soon Watch">
         <h3>COMING SOON</h3>
-        <p>Exciting new designs on the horizon.</p>
+        <!-- <p>Exciting new designs on the horizon.</p> -->
         <a href="#" class="btn">View Details</a>
     </div>
 
     <!-- Card 10 -->
     <div class="cards" data-tags="ALL, COMING SOON" onclick="openModal(10)">
-        <img src="Assets/Images/assets/images/image6.jpg" alt="Coming Soon Watch">
+        <img src="Assets/Images/PRODUCTS/Rose_Gold_Ruby_Diamond_Front_Rounded.webp" alt="Coming Soon Watch">
         <h3>COMING SOON</h3>
-        <p>Get ready for something new!</p>
+        <!-- <p>Get ready for something new!</p> -->
         <a href="#" class="btn">View Details</a>
     </div>
 </div>

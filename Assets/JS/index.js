@@ -3,13 +3,13 @@
     {
         id: 1,
         name: "36MM Watch",
-        image: "Assets/Images/assets/images/image1.jpg",
+        image: "Assets/Images/PRODUCTS/BlackLinkSkeleton2Rounded40mm.webp",
         price: 5000,
     },
     {
         id: 2,
         name: "36MM Watch",
-        image: "Assets/Images/assets/images/image2.jpg",
+        image: "Assets/Images/PRODUCTS/New_Diamond_Rounded_5ae39b3d-49ac-4c12-8bc7-b48d1544a448.webp",
         price: 6000,
     },
     {
