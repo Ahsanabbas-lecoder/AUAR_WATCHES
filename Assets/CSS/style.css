@@ -69,11 +69,12 @@
 
 /* Header with Background Image Slideshow */
 .header {
-    align-items:start;
+    /* align-items:start; */
     /* padding: 50px 0; */
     /* position: relative; */
     /* overflow: hidden; */
-    height: 400px;
+    height: 100%;
+    /* background-image: url("../Images/header/IMG_2202.webp"); */
 }
 
 .header::before {
@@ -536,4 +537,14 @@
     color: black;
     border: #000 solid 3px;
 
+}
+ /* Additional styles for cart functionality */
+ .cart-badge {
+    font-size: 0.6rem;
+}
+#cart-items img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
 }
