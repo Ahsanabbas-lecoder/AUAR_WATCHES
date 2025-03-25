@@ -22,6 +22,44 @@
             border-radius: 10px;
             padding: 20px;
         }
+        .quantity-control {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .quantity-btn {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #dee2e6;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .quantity-input {
+            width: 50px;
+            text-align: center;
+        }
+        .remove-item {
+            color: #dc3545;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .empty-cart-message {
+            text-align: center;
+            padding: 20px;
+            color: #6c757d;
+        }
+        @media (max-width: 768px) {
+            .row {
+                flex-direction: column-reverse;
+            }
+            .col-md-6 {
+                margin-bottom: 20px;
+            }
+        }
     </style>
 </head>
 
@@ -125,8 +163,8 @@
     <!-- Custom JS -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Get cart from sessionStorage
-            const cart = JSON.parse(sessionStorage.getItem('cart')) || [];
+            // Get cart from sessionStorage or initialize empty array
+            let cart = JSON.parse(sessionStorage.getItem('cart')) || [];
             const cartItemsContainer = document.getElementById('cart-items');
             const cartSubtotalElement = document.getElementById('cart-subtotal');
             const cartTotalElement = document.getElementById('cart-total');
@@ -138,13 +176,19 @@
                 let subtotal = 0;
                 
                 if (cart.length === 0) {
-                    cartItemsContainer.innerHTML = '<p>Your cart is empty</p>';
+                    cartItemsContainer.innerHTML = `
+                        <div class="empty-cart-message">
+                            <i class="bi bi-cart-x" style="font-size: 2rem;"></i>
+                            <p>Your cart is empty</p>
+                            <a href="index.html" class="btn btn-outline-primary">Continue Shopping</a>
+                        </div>
+                    `;
                     cartSubtotalElement.textContent = 'Rs. 0';
                     cartTotalElement.textContent = 'Rs. ' + shippingCost;
                     return;
                 }
                 
-                cart.forEach(item => {
+                cart.forEach((item, index) => {
                     const itemElement = document.createElement('div');
                     itemElement.className = 'd-flex justify-content-between align-items-center mb-3';
                     itemElement.innerHTML = `
@@ -153,22 +197,84 @@
                             <div>
                                 <h6>${item.name}</h6>
                                 <p class="mb-0">Rs. ${item.price}</p>
+                                <div class="quantity-control mt-2">
+                                    <button class="quantity-btn minus" data-index="${index}">-</button>
+                                    <input type="number" class="quantity-input" value="${item.quantity || 1}" min="1" data-index="${index}">
+                                    <button class="quantity-btn plus" data-index="${index}">+</button>
+                                </div>
                             </div>
+                        </div>
+                        <div>
+                            <span class="item-total">Rs. ${(item.price * (item.quantity || 1)).toFixed(2)}</span>
+                            <span class="remove-item" data-index="${index}"><i class="bi bi-trash"></i></span>
                         </div>
                     `;
                     cartItemsContainer.appendChild(itemElement);
-                    subtotal += item.price;
+                    subtotal += item.price * (item.quantity || 1);
                 });
                 
-                cartSubtotalElement.textContent = 'Rs. ' + subtotal;
-                cartTotalElement.textContent = 'Rs. ' + (subtotal + shippingCost);
+                cartSubtotalElement.textContent = 'Rs. ' + subtotal.toFixed(2);
+                cartTotalElement.textContent = 'Rs. ' + (subtotal + shippingCost).toFixed(2);
             }
 
+            // Update cart in sessionStorage
+            function updateCart() {
+                sessionStorage.setItem('cart', JSON.stringify(cart));
+                displayCartItems();
+            }
+
+            // Handle quantity changes
+            document.addEventListener('click', function(e) {
+                // Plus button
+                if (e.target.classList.contains('plus')) {
+                    const index = e.target.getAttribute('data-index');
+                    cart[index].quantity = (cart[index].quantity || 1) + 1;
+                    updateCart();
+                }
+                
+                // Minus button
+                if (e.target.classList.contains('minus')) {
+                    const index = e.target.getAttribute('data-index');
+                    if (cart[index].quantity > 1) {
+                        cart[index].quantity = cart[index].quantity - 1;
+                        updateCart();
+                    }
+                }
+                
+                // Remove item
+                if (e.target.classList.contains('remove-item') || e.target.closest('.remove-item')) {
+                    const index = e.target.getAttribute('data-index') || 
+                                 e.target.closest('.remove-item').getAttribute('data-index');
+                    cart.splice(index, 1);
+                    updateCart();
+                }
+            });
+
+            // Handle manual quantity input
+            document.addEventListener('change', function(e) {
+                if (e.target.classList.contains('quantity-input')) {
+                    const index = e.target.getAttribute('data-index');
+                    const newQuantity = parseInt(e.target.value);
+                    if (newQuantity > 0) {
+                        cart[index].quantity = newQuantity;
+                        updateCart();
+                    } else {
+                        e.target.value = cart[index].quantity || 1;
+                    }
+                }
+            });
+
+            // Initial display
             displayCartItems();
 
             // Handle form submission
             document.getElementById('checkout-form').addEventListener('submit', function(e) {
                 e.preventDefault();
+                
+                if (cart.length === 0) {
+                    alert('Your cart is empty. Please add items before checking out.');
+                    return;
+                }
                 
                 // In a real application, you would process payment here
                 alert('Thank you for your order! Your order has been placed successfully.');
@@ -176,8 +282,8 @@
                 // Clear the cart
                 sessionStorage.removeItem('cart');
                 
-                // Redirect to order confirmation page
-                window.location.href = 'index.html'; // Change this to your confirmation page
+                // Redirect to home page
+                window.location.href = 'index.html';
             });
         });
     </script>
