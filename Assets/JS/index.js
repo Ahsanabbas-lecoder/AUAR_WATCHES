@@ -113,6 +113,24 @@ const products = [
         name: "DATE 001",
         image: "Assets/Images/PRODUCTS/Rose-Link-White-Date-Rounded-40mm.webp",
         price: 18000,
+    },
+    {
+        id: 20,
+        name: "DATE 001",
+        image: "Assets/Images/PRODUCTS/Rose-Link-White-Date-Rounded-40mm.webp",
+        price: 18000,
+    },
+    {
+        id: 21,
+        name: "DATE 002",
+        image: "Assets/Images/PRODUCTS/Black_Link_Black_Flat_Date _Rounded.webp",
+        price: 18000,
+    },
+    {
+        id: 22,
+        name: "DATE 003",
+        image: "Assets/Images/PRODUCTS/Steel-Link-Maroon-Silver-Numbers--Rounded-_2.webp",
+        price: 18000,
     }
     
 ];
